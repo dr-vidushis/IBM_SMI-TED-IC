@@ -60,7 +60,7 @@ model_smi_ted.eval()
 
 # %%
 ## import data for prediction
-df_ionic_test = pd.read_csv('data/HIL.csv')
+df_ionic_test = pd.read_csv('data/test.csv')
 
 # %%
 with torch.no_grad():
@@ -80,7 +80,7 @@ df_ionic_test['ionic_predicted'] = outputs
 
 # %%
 
-df_ionic_test.to_csv(f'HIL_predictions.csv')
+df_ionic_test.to_csv(f'predictions.csv')
 
 # %%
 
