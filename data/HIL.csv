@@ -1,0 +1,9 @@
+smiles,temperature,ionic
+COC(=O)OC<sep>57.42665<sep>O=C1OCC(F)O1<sep>33.46226<sep>F[P-](F)(F)(F)(F)F.[Li+]<sep>6.94727<sep>O=C1O[B-]2(OC1=O)OC(=O)C(=O)O2.[Li+]<sep>0.90754<sep>CO.OCCO<sep>0.07799<sep>C[Si](C)(C)OP(O[Si](C)(C)C)O[Si](C)(C)C<sep>1.17828<sep>,20,1
+COC(=O)OC<sep>57.66611<sep>O=C1OCC(F)O1<sep>33.33512<sep>F[P-](F)(F)(F)(F)F.[Li+]<sep>6.92087<sep>O=C1O[B-]2(OC1=O)OC(=O)C(=O)O2.[Li+]<sep>0.90409<sep>C[Si](C)(C)OP(O[Si](C)(C)C)O[Si](C)(C)C<sep>1.17380<sep>,20,1
+COC(=O)OC<sep>57.96895<sep>O=C1OCC(F)O1<sep>34.28665<sep>F[P-](F)(F)(F)(F)F.[Li+]<sep>6.78228<sep>O=C1O[B-]2(OC1=O)OC(=O)C(=O)O2.[Li+]<sep>0.88599<sep>CO.OCCO<sep>0.07614<sep>,20,1
+COC(=O)OC<sep>58.85366<sep>O=C1OCC(F)O1<sep>34.29378<sep>O=S(=O)(F)[N-]S(=O)(=O)F.[Li+]<sep>5.78040<sep>O=C1O[B-]2(OC1=O)OC(=O)C(=O)O2.[Li+]<sep>0.93009<sep>C[Si](C)(C)OP(O[Si](C)(C)C)O[Si](C)(C)C<sep>0.14207<sep>,20,1
+COC(=O)OC<sep>57.05417<sep>O=C1OCC(F)O1<sep>33.24522<sep>F[P-](F)(F)(F)(F)F.[Li+]<sep>6.90221<sep>O=C1O[B-]2(OC1=O)OC(=O)C(=O)O2.[Li+]<sep>0.90166<sep>CO.OCCO<sep>0.07748<sep>N#Cc1nc(C(F)(F)F)[n-]c1C#N.[Li+]<sep>1.81927<sep>,20,1
+COC(=O)OC<sep>55.68847<sep>O=C1OCC(F)O1<sep>31.70054<sep>F[P-](F)(F)(F)(F)F.[Li+]<sep>10.40687<sep>O=C1O[B-]2(OC1=O)OC(=O)C(=O)O2.[Li+]<sep>0.92445<sep>CO.OCCO<sep>0.07944<sep>C[Si](C)(C)OP(O[Si](C)(C)C)O[Si](C)(C)C<sep>1.20023<sep>,20,1
+COC(=O)OC<sep>81.89412<sep>O=C1OCC(F)O1<sep>9.36228<sep>F[P-](F)(F)(F)(F)F.[Li+]<sep>6.66706<sep>O=C1O[B-]2(OC1=O)OC(=O)C(=O)O2.[Li+]<sep>0.87094<sep>CO.OCCO<sep>0.07484<sep>C[Si](C)(C)OP(O[Si](C)(C)C)O[Si](C)(C)C<sep>1.13076<sep>,20,1
+COC(=O)OC<sep>54.77392<sep>O=C1OCC(F)O1<sep>9.30511<sep>O=C1OCCO1<sep>27.23076<sep>F[P-](F)(F)(F)(F)F.[Li+]<sep>6.62635<sep>O=C1O[B-]2(OC1=O)OC(=O)C(=O)O2.[Li+]<sep>0.86562<sep>CO.OCCO<sep>0.07438<sep>C[Si](C)(C)OP(O[Si](C)(C)C)O[Si](C)(C)C<sep>1.12385<sep>,20,1

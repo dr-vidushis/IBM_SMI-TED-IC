@@ -1,0 +1,8 @@
+smiles,temperature,ionic
+F[P-](F)(F)(F)(F)F.[Li+]<sep>8.00000<sep>CS(C)=O<sep>13.00000<sep>COC(C)=O<sep>26.00000<sep>COC(=O)OC<sep>26.00000<sep>C1CCOC1<sep>12.00000<sep>CC#N<sep>15.00000<sep>,20,14.73
+O=C1O[B-]2(OC1=O)OC(=O)C(=O)O2.[Li+]<sep>5.00000<sep>CCC#N<sep>73.00000<sep>COC=O<sep>22.00000<sep>,20,12.13
+O=S(=O)(F)[N-]S(=O)(=O)F.[Li+]<sep>9.00000<sep>COC=O<sep>26.00000<sep>CCC#N<sep>35.00000<sep>COC(=O)OC<sep>15.00000<sep>CC1CCCO1<sep>15.00000<sep>,20,19.14
+F[P-](F)(F)(F)(F)F.[Li+]<sep>8.00000<sep>CCOC(=O)OC<sep>20.00000<sep>COCCOC<sep>32.00000<sep>O=C1CCCO1<sep>30.00000<sep>CC1CCCO1<sep>10.00000<sep>,20,13.97
+F[P-](F)(F)(F)(F)F.[Li+]<sep>9.00000<sep>COCCOC<sep>25.00000<sep>CCOC(=O)OC<sep>21.00000<sep>COC(=O)OC<sep>32.00000<sep>C1COCO1<sep>13.00000<sep>,20,12.42
+O=S(=O)(F)[N-]S(=O)(=O)F.[Li+]<sep>14.00000<sep>CCOC=O<sep>17.00000<sep>COCCOC<sep>31.00000<sep>COCCOCCOC<sep>38.00000<sep>,20,11.95
+O=C1O[B-](F)(F)OC1=O.[Li+]<sep>9.00000<sep>CC1CCCO1<sep>27.00000<sep>COCCOCCOC<sep>33.00000<sep>O=C1CCCO1<sep>31.00000<sep>,20,10.61
