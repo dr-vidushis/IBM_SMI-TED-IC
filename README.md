@@ -26,4 +26,4 @@ pip install -r requirements.txt
 
 ## Usage
 
-To predict use predict.py
+To predict the ionic conductivity of an electrolyte formulation use `predict.py`.
