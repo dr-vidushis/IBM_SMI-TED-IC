@@ -27,3 +27,5 @@ pip install -r requirements.txt
 ## Usage
 
 To predict the ionic conductivity of an electrolyte formulation use `predict.py`.
+
+The original repository for the SMI-TED model and other multimodal IBM chemical foundation models can be found here: https://github.com/IBM/materials
