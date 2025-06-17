@@ -1,0 +1,956 @@
+Model: "model_6"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_1 (InputLayer)        [(None, None, 100)]          0         []                            
+                                                                                                  
+ input_2 (InputLayer)        [(None, None, None)]         0         []                            
+                                                                                                  
+ input_25 (InputLayer)       [(None, None, None)]         0         []                            
+                                                                                                  
+ input_5 (InputLayer)        [(None, None, 100)]          0         []                            
+                                                                                                  
+ input_6 (InputLayer)        [(None, None, None)]         0         []                            
+                                                                                                  
+ input_9 (InputLayer)        [(None, None, 100)]          0         []                            
+                                                                                                  
+ input_10 (InputLayer)       [(None, None, None)]         0         []                            
+                                                                                                  
+ input_13 (InputLayer)       [(None, None, 100)]          0         []                            
+                                                                                                  
+ input_14 (InputLayer)       [(None, None, None)]         0         []                            
+                                                                                                  
+ input_17 (InputLayer)       [(None, None, 100)]          0         []                            
+                                                                                                  
+ input_18 (InputLayer)       [(None, None, None)]         0         []                            
+                                                                                                  
+ input_21 (InputLayer)       [(None, None, 100)]          0         []                            
+                                                                                                  
+ input_22 (InputLayer)       [(None, None, None)]         0         []                            
+                                                                                                  
+ model (Functional)          (None, 100)                  40000     ['input_1[0][0]',             
+                                                                     'input_2[0][0]']             
+                                                                                                  
+ tf.__operators__.getitem (  (None, None)                 0         ['input_25[0][0]']            
+ SlicingOpLambda)                                                                                 
+                                                                                                  
+ model_1 (Functional)        (None, 100)                  40000     ['input_5[0][0]',             
+                                                                     'input_6[0][0]']             
+                                                                                                  
+ tf.__operators__.getitem_2  (None, None)                 0         ['input_25[0][0]']            
+  (SlicingOpLambda)                                                                               
+                                                                                                  
+ model_2 (Functional)        (None, 100)                  40000     ['input_9[0][0]',             
+                                                                     'input_10[0][0]']            
+                                                                                                  
+ tf.__operators__.getitem_4  (None, None)                 0         ['input_25[0][0]']            
+  (SlicingOpLambda)                                                                               
+                                                                                                  
+ model_3 (Functional)        (None, 100)                  40000     ['input_13[0][0]',            
+                                                                     'input_14[0][0]']            
+                                                                                                  
+ tf.__operators__.getitem_6  (None, None)                 0         ['input_25[0][0]']            
+  (SlicingOpLambda)                                                                               
+                                                                                                  
+ model_4 (Functional)        (None, 100)                  40000     ['input_17[0][0]',            
+                                                                     'input_18[0][0]']            
+                                                                                                  
+ tf.__operators__.getitem_8  (None, None)                 0         ['input_25[0][0]']            
+  (SlicingOpLambda)                                                                               
+                                                                                                  
+ model_5 (Functional)        (None, 100)                  40000     ['input_21[0][0]',            
+                                                                     'input_22[0][0]']            
+                                                                                                  
+ tf.__operators__.getitem_1  (None, None)                 0         ['input_25[0][0]']            
+ 0 (SlicingOpLambda)                                                                              
+                                                                                                  
+ multiply (Multiply)         (None, 100)                  0         ['model[0][0]',               
+                                                                     'tf.__operators__.getitem[0][
+                                                                    0]']                          
+                                                                                                  
+ multiply_1 (Multiply)       (None, 100)                  0         ['model_1[0][0]',             
+                                                                     'tf.__operators__.getitem_2[0
+                                                                    ][0]']                        
+                                                                                                  
+ multiply_2 (Multiply)       (None, 100)                  0         ['model_2[0][0]',             
+                                                                     'tf.__operators__.getitem_4[0
+                                                                    ][0]']                        
+                                                                                                  
+ multiply_3 (Multiply)       (None, 100)                  0         ['model_3[0][0]',             
+                                                                     'tf.__operators__.getitem_6[0
+                                                                    ][0]']                        
+                                                                                                  
+ multiply_4 (Multiply)       (None, 100)                  0         ['model_4[0][0]',             
+                                                                     'tf.__operators__.getitem_8[0
+                                                                    ][0]']                        
+                                                                                                  
+ multiply_5 (Multiply)       (None, 100)                  0         ['model_5[0][0]',             
+                                                                     'tf.__operators__.getitem_10[
+                                                                    0][0]']                       
+                                                                                                  
+ concatenate (Concatenate)   (None, 600)                  0         ['multiply[0][0]',            
+                                                                     'multiply_1[0][0]',          
+                                                                     'multiply_2[0][0]',          
+                                                                     'multiply_3[0][0]',          
+                                                                     'multiply_4[0][0]',          
+                                                                     'multiply_5[0][0]']          
+                                                                                                  
+ input_26 (InputLayer)       [(None, 1)]                  0         []                            
+                                                                                                  
+ concatenate_1 (Concatenate  (None, 601)                  0         ['concatenate[0][0]',         
+ )                                                                   'input_26[0][0]']            
+                                                                                                  
+ dense_6 (Dense)             (None, 200)                  120400    ['concatenate_1[0][0]']       
+                                                                                                  
+ dense_7 (Dense)             (None, 100)                  20100     ['dense_6[0][0]']             
+                                                                                                  
+ dense_8 (Dense)             (None, 1)                    101       ['dense_7[0][0]']             
+                                                                                                  
+==================================================================================================
+Total params: 380601 (1.45 MB)
+Trainable params: 380601 (1.45 MB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________
+Epoch 1/400
+10932/10932 - 199s - loss: 0.2620 - val_loss: 0.1158 - 199s/epoch - 18ms/step
+Epoch 2/400
+10932/10932 - 197s - loss: 0.1284 - val_loss: 0.0981 - 197s/epoch - 18ms/step
+Epoch 3/400
+10932/10932 - 198s - loss: 0.1148 - val_loss: 0.0917 - 198s/epoch - 18ms/step
+Epoch 4/400
+10932/10932 - 197s - loss: 0.1074 - val_loss: 0.0888 - 197s/epoch - 18ms/step
+Epoch 5/400
+10932/10932 - 197s - loss: 0.1046 - val_loss: 0.0711 - 197s/epoch - 18ms/step
+Epoch 6/400
+10932/10932 - 197s - loss: 0.0861 - val_loss: 0.0693 - 197s/epoch - 18ms/step
+Epoch 7/400
+10932/10932 - 197s - loss: 0.0824 - val_loss: 0.0654 - 197s/epoch - 18ms/step
+Epoch 8/400
+10932/10932 - 197s - loss: 0.0761 - val_loss: 0.0564 - 197s/epoch - 18ms/step
+Epoch 9/400
+10932/10932 - 197s - loss: 0.0662 - val_loss: 0.0516 - 197s/epoch - 18ms/step
+Epoch 10/400
+10932/10932 - 196s - loss: 0.0594 - val_loss: 0.0483 - 196s/epoch - 18ms/step
+Epoch 11/400
+10932/10932 - 198s - loss: 0.0537 - val_loss: 0.0454 - 198s/epoch - 18ms/step
+Epoch 12/400
+10932/10932 - 199s - loss: 0.0496 - val_loss: 0.0433 - 199s/epoch - 18ms/step
+Epoch 13/400
+10932/10932 - 199s - loss: 0.0467 - val_loss: 0.0417 - 199s/epoch - 18ms/step
+Epoch 14/400
+10932/10932 - 196s - loss: 0.0445 - val_loss: 0.0405 - 196s/epoch - 18ms/step
+Epoch 15/400
+10932/10932 - 199s - loss: 0.0426 - val_loss: 0.0395 - 199s/epoch - 18ms/step
+Epoch 16/400
+10932/10932 - 194s - loss: 0.0413 - val_loss: 0.0387 - 194s/epoch - 18ms/step
+Epoch 17/400
+10932/10932 - 193s - loss: 0.0399 - val_loss: 0.0379 - 193s/epoch - 18ms/step
+Epoch 18/400
+10932/10932 - 193s - loss: 0.0393 - val_loss: 0.0369 - 193s/epoch - 18ms/step
+Epoch 19/400
+10932/10932 - 193s - loss: 0.0375 - val_loss: 0.0364 - 193s/epoch - 18ms/step
+Epoch 20/400
+10932/10932 - 193s - loss: 0.0365 - val_loss: 0.0358 - 193s/epoch - 18ms/step
+Epoch 21/400
+10932/10932 - 196s - loss: 0.0359 - val_loss: 0.0351 - 196s/epoch - 18ms/step
+Epoch 22/400
+10932/10932 - 196s - loss: 0.0348 - val_loss: 0.0345 - 196s/epoch - 18ms/step
+Epoch 23/400
+10932/10932 - 195s - loss: 0.0342 - val_loss: 0.0337 - 195s/epoch - 18ms/step
+Epoch 24/400
+10932/10932 - 195s - loss: 0.0331 - val_loss: 0.0332 - 195s/epoch - 18ms/step
+Epoch 25/400
+10932/10932 - 198s - loss: 0.0325 - val_loss: 0.0327 - 198s/epoch - 18ms/step
+Epoch 26/400
+10932/10932 - 197s - loss: 0.0319 - val_loss: 0.0322 - 197s/epoch - 18ms/step
+Epoch 27/400
+10932/10932 - 196s - loss: 0.0313 - val_loss: 0.0319 - 196s/epoch - 18ms/step
+Epoch 28/400
+10932/10932 - 196s - loss: 0.0309 - val_loss: 0.0316 - 196s/epoch - 18ms/step
+Epoch 29/400
+10932/10932 - 195s - loss: 0.0305 - val_loss: 0.0313 - 195s/epoch - 18ms/step
+Epoch 30/400
+10932/10932 - 193s - loss: 0.0301 - val_loss: 0.0310 - 193s/epoch - 18ms/step
+Epoch 31/400
+10932/10932 - 195s - loss: 0.0297 - val_loss: 0.0307 - 195s/epoch - 18ms/step
+Epoch 32/400
+10932/10932 - 194s - loss: 0.0294 - val_loss: 0.0305 - 194s/epoch - 18ms/step
+Epoch 33/400
+10932/10932 - 195s - loss: 0.0300 - val_loss: 0.0300 - 195s/epoch - 18ms/step
+Epoch 34/400
+10932/10932 - 195s - loss: 0.0285 - val_loss: 0.0298 - 195s/epoch - 18ms/step
+Epoch 35/400
+10932/10932 - 196s - loss: 0.0282 - val_loss: 0.0300 - 196s/epoch - 18ms/step
+Epoch 36/400
+10932/10932 - 196s - loss: 0.0302 - val_loss: 0.0293 - 196s/epoch - 18ms/step
+Epoch 37/400
+10932/10932 - 196s - loss: 0.0276 - val_loss: 0.0294 - 196s/epoch - 18ms/step
+Epoch 38/400
+10932/10932 - 196s - loss: 0.0275 - val_loss: 0.0290 - 196s/epoch - 18ms/step
+Epoch 39/400
+10932/10932 - 196s - loss: 0.0275 - val_loss: 0.0286 - 196s/epoch - 18ms/step
+Epoch 40/400
+10932/10932 - 197s - loss: 0.0268 - val_loss: 0.0285 - 197s/epoch - 18ms/step
+Epoch 41/400
+10932/10932 - 195s - loss: 0.0270 - val_loss: 0.0286 - 195s/epoch - 18ms/step
+Epoch 42/400
+10932/10932 - 196s - loss: 0.0264 - val_loss: 0.0282 - 196s/epoch - 18ms/step
+Epoch 43/400
+10932/10932 - 196s - loss: 0.0261 - val_loss: 0.0279 - 196s/epoch - 18ms/step
+Epoch 44/400
+10932/10932 - 196s - loss: 0.0258 - val_loss: 0.0275 - 196s/epoch - 18ms/step
+Epoch 45/400
+10932/10932 - 196s - loss: 0.0263 - val_loss: 0.0273 - 196s/epoch - 18ms/step
+Epoch 46/400
+10932/10932 - 196s - loss: 0.0252 - val_loss: 0.0270 - 196s/epoch - 18ms/step
+Epoch 47/400
+10932/10932 - 196s - loss: 0.0249 - val_loss: 0.0267 - 196s/epoch - 18ms/step
+Epoch 48/400
+10932/10932 - 196s - loss: 0.0245 - val_loss: 0.0266 - 196s/epoch - 18ms/step
+Epoch 49/400
+10932/10932 - 199s - loss: 0.0242 - val_loss: 0.0264 - 199s/epoch - 18ms/step
+Epoch 50/400
+10932/10932 - 196s - loss: 0.0239 - val_loss: 0.0261 - 196s/epoch - 18ms/step
+Epoch 51/400
+10932/10932 - 196s - loss: 0.0236 - val_loss: 0.0258 - 196s/epoch - 18ms/step
+Epoch 52/400
+10932/10932 - 196s - loss: 0.0233 - val_loss: 0.0257 - 196s/epoch - 18ms/step
+Epoch 53/400
+10932/10932 - 196s - loss: 0.0230 - val_loss: 0.0253 - 196s/epoch - 18ms/step
+Epoch 54/400
+10932/10932 - 196s - loss: 0.0228 - val_loss: 0.0252 - 196s/epoch - 18ms/step
+Epoch 55/400
+10932/10932 - 196s - loss: 0.0225 - val_loss: 0.0250 - 196s/epoch - 18ms/step
+Epoch 56/400
+10932/10932 - 195s - loss: 0.0222 - val_loss: 0.0247 - 195s/epoch - 18ms/step
+Epoch 57/400
+10932/10932 - 196s - loss: 0.0219 - val_loss: 0.0247 - 196s/epoch - 18ms/step
+Epoch 58/400
+10932/10932 - 196s - loss: 0.0216 - val_loss: 0.0249 - 196s/epoch - 18ms/step
+Epoch 59/400
+10932/10932 - 195s - loss: 0.0215 - val_loss: 0.0241 - 195s/epoch - 18ms/step
+Epoch 60/400
+10932/10932 - 195s - loss: 0.0212 - val_loss: 0.0235 - 195s/epoch - 18ms/step
+Epoch 61/400
+10932/10932 - 194s - loss: 0.0209 - val_loss: 0.0231 - 194s/epoch - 18ms/step
+Epoch 62/400
+10932/10932 - 197s - loss: 0.0205 - val_loss: 0.0226 - 197s/epoch - 18ms/step
+Epoch 63/400
+10932/10932 - 196s - loss: 0.0203 - val_loss: 0.0223 - 196s/epoch - 18ms/step
+Epoch 64/400
+10932/10932 - 197s - loss: 0.0200 - val_loss: 0.0221 - 197s/epoch - 18ms/step
+Epoch 65/400
+10932/10932 - 197s - loss: 0.0199 - val_loss: 0.0217 - 197s/epoch - 18ms/step
+Epoch 66/400
+10932/10932 - 196s - loss: 0.0196 - val_loss: 0.0217 - 196s/epoch - 18ms/step
+Epoch 67/400
+10932/10932 - 197s - loss: 0.0196 - val_loss: 0.0212 - 197s/epoch - 18ms/step
+Epoch 68/400
+10932/10932 - 197s - loss: 0.0193 - val_loss: 0.0255 - 197s/epoch - 18ms/step
+Epoch 69/400
+10932/10932 - 197s - loss: 0.0194 - val_loss: 0.0247 - 197s/epoch - 18ms/step
+Epoch 70/400
+10932/10932 - 197s - loss: 0.0190 - val_loss: 0.0213 - 197s/epoch - 18ms/step
+Epoch 71/400
+10932/10932 - 197s - loss: 0.0187 - val_loss: 0.0211 - 197s/epoch - 18ms/step
+Epoch 72/400
+10932/10932 - 195s - loss: 0.0185 - val_loss: 0.0201 - 195s/epoch - 18ms/step
+Epoch 73/400
+10932/10932 - 194s - loss: 0.0184 - val_loss: 0.0201 - 194s/epoch - 18ms/step
+Epoch 74/400
+10932/10932 - 195s - loss: 0.0182 - val_loss: 0.0200 - 195s/epoch - 18ms/step
+Epoch 75/400
+10932/10932 - 195s - loss: 0.0181 - val_loss: 0.0199 - 195s/epoch - 18ms/step
+Epoch 76/400
+10932/10932 - 196s - loss: 0.0179 - val_loss: 0.0195 - 196s/epoch - 18ms/step
+Epoch 77/400
+10932/10932 - 195s - loss: 0.0178 - val_loss: 0.0197 - 195s/epoch - 18ms/step
+Epoch 78/400
+10932/10932 - 195s - loss: 0.0176 - val_loss: 0.0193 - 195s/epoch - 18ms/step
+Epoch 79/400
+10932/10932 - 195s - loss: 0.0174 - val_loss: 0.0192 - 195s/epoch - 18ms/step
+Epoch 80/400
+10932/10932 - 197s - loss: 0.0173 - val_loss: 0.0190 - 197s/epoch - 18ms/step
+Epoch 81/400
+10932/10932 - 199s - loss: 0.0172 - val_loss: 0.0187 - 199s/epoch - 18ms/step
+Epoch 82/400
+10932/10932 - 199s - loss: 0.0171 - val_loss: 0.0186 - 199s/epoch - 18ms/step
+Epoch 83/400
+10932/10932 - 199s - loss: 0.0170 - val_loss: 0.0185 - 199s/epoch - 18ms/step
+Epoch 84/400
+10932/10932 - 198s - loss: 0.0169 - val_loss: 0.0183 - 198s/epoch - 18ms/step
+Epoch 85/400
+10932/10932 - 199s - loss: 0.0167 - val_loss: 0.0181 - 199s/epoch - 18ms/step
+Epoch 86/400
+10932/10932 - 198s - loss: 0.0166 - val_loss: 0.0181 - 198s/epoch - 18ms/step
+Epoch 87/400
+10932/10932 - 199s - loss: 0.0166 - val_loss: 0.0179 - 199s/epoch - 18ms/step
+Epoch 88/400
+10932/10932 - 199s - loss: 0.0165 - val_loss: 0.0180 - 199s/epoch - 18ms/step
+Epoch 89/400
+10932/10932 - 201s - loss: 0.0164 - val_loss: 0.0177 - 201s/epoch - 18ms/step
+Epoch 90/400
+10932/10932 - 203s - loss: 0.0163 - val_loss: 0.0177 - 203s/epoch - 19ms/step
+Epoch 91/400
+10932/10932 - 204s - loss: 0.0162 - val_loss: 0.0175 - 204s/epoch - 19ms/step
+Epoch 92/400
+10932/10932 - 203s - loss: 0.0161 - val_loss: 0.0175 - 203s/epoch - 19ms/step
+Epoch 93/400
+10932/10932 - 203s - loss: 0.0160 - val_loss: 0.0172 - 203s/epoch - 19ms/step
+Epoch 94/400
+10932/10932 - 203s - loss: 0.0159 - val_loss: 0.0172 - 203s/epoch - 19ms/step
+Epoch 95/400
+10932/10932 - 203s - loss: 0.0159 - val_loss: 0.0171 - 203s/epoch - 19ms/step
+Epoch 96/400
+10932/10932 - 203s - loss: 0.0158 - val_loss: 0.0171 - 203s/epoch - 19ms/step
+Epoch 97/400
+10932/10932 - 203s - loss: 0.0157 - val_loss: 0.0169 - 203s/epoch - 19ms/step
+Epoch 98/400
+10932/10932 - 203s - loss: 0.0156 - val_loss: 0.0169 - 203s/epoch - 19ms/step
+Epoch 99/400
+10932/10932 - 203s - loss: 0.0155 - val_loss: 0.0168 - 203s/epoch - 19ms/step
+Epoch 100/400
+10932/10932 - 219s - loss: 0.0154 - val_loss: 0.0169 - 219s/epoch - 20ms/step
+Epoch 101/400
+10932/10932 - 219s - loss: 0.0154 - val_loss: 0.0166 - 219s/epoch - 20ms/step
+Epoch 102/400
+10932/10932 - 203s - loss: 0.0153 - val_loss: 0.0167 - 203s/epoch - 19ms/step
+Epoch 103/400
+10932/10932 - 204s - loss: 0.0152 - val_loss: 0.0166 - 204s/epoch - 19ms/step
+Epoch 104/400
+10932/10932 - 205s - loss: 0.0152 - val_loss: 0.0164 - 205s/epoch - 19ms/step
+Epoch 105/400
+10932/10932 - 205s - loss: 0.0151 - val_loss: 0.0165 - 205s/epoch - 19ms/step
+Epoch 106/400
+10932/10932 - 204s - loss: 0.0151 - val_loss: 0.0164 - 204s/epoch - 19ms/step
+Epoch 107/400
+10932/10932 - 204s - loss: 0.0150 - val_loss: 0.0163 - 204s/epoch - 19ms/step
+Epoch 108/400
+10932/10932 - 204s - loss: 0.0149 - val_loss: 0.0163 - 204s/epoch - 19ms/step
+Epoch 109/400
+10932/10932 - 205s - loss: 0.0149 - val_loss: 0.0162 - 205s/epoch - 19ms/step
+Epoch 110/400
+10932/10932 - 204s - loss: 0.0148 - val_loss: 0.0162 - 204s/epoch - 19ms/step
+Epoch 111/400
+10932/10932 - 204s - loss: 0.0148 - val_loss: 0.0161 - 204s/epoch - 19ms/step
+Epoch 112/400
+10932/10932 - 204s - loss: 0.0147 - val_loss: 0.0162 - 204s/epoch - 19ms/step
+Epoch 113/400
+10932/10932 - 204s - loss: 0.0147 - val_loss: 0.0158 - 204s/epoch - 19ms/step
+Epoch 114/400
+10932/10932 - 204s - loss: 0.0146 - val_loss: 0.0161 - 204s/epoch - 19ms/step
+Epoch 115/400
+10932/10932 - 204s - loss: 0.0146 - val_loss: 0.0159 - 204s/epoch - 19ms/step
+Epoch 116/400
+10932/10932 - 204s - loss: 0.0145 - val_loss: 0.0158 - 204s/epoch - 19ms/step
+Epoch 117/400
+10932/10932 - 204s - loss: 0.0144 - val_loss: 0.0155 - 204s/epoch - 19ms/step
+Epoch 118/400
+10932/10932 - 204s - loss: 0.0144 - val_loss: 0.0158 - 204s/epoch - 19ms/step
+Epoch 119/400
+10932/10932 - 204s - loss: 0.0143 - val_loss: 0.0156 - 204s/epoch - 19ms/step
+Epoch 120/400
+10932/10932 - 204s - loss: 0.0143 - val_loss: 0.0158 - 204s/epoch - 19ms/step
+Epoch 121/400
+10932/10932 - 204s - loss: 0.0143 - val_loss: 0.0153 - 204s/epoch - 19ms/step
+Epoch 122/400
+10932/10932 - 204s - loss: 0.0142 - val_loss: 0.0150 - 204s/epoch - 19ms/step
+Epoch 123/400
+10932/10932 - 204s - loss: 0.0142 - val_loss: 0.0151 - 204s/epoch - 19ms/step
+Epoch 124/400
+10932/10932 - 220s - loss: 0.0141 - val_loss: 0.0150 - 220s/epoch - 20ms/step
+Epoch 125/400
+10932/10932 - 234s - loss: 0.0141 - val_loss: 0.0153 - 234s/epoch - 21ms/step
+Epoch 126/400
+10932/10932 - 234s - loss: 0.0141 - val_loss: 0.0149 - 234s/epoch - 21ms/step
+Epoch 127/400
+10932/10932 - 234s - loss: 0.0140 - val_loss: 0.0155 - 234s/epoch - 21ms/step
+Epoch 128/400
+10932/10932 - 235s - loss: 0.0140 - val_loss: 0.0154 - 235s/epoch - 22ms/step
+Epoch 129/400
+10932/10932 - 234s - loss: 0.0139 - val_loss: 0.0148 - 234s/epoch - 21ms/step
+Epoch 130/400
+10932/10932 - 235s - loss: 0.0139 - val_loss: 0.0147 - 235s/epoch - 21ms/step
+Epoch 131/400
+10932/10932 - 237s - loss: 0.0138 - val_loss: 0.0153 - 237s/epoch - 22ms/step
+Epoch 132/400
+10932/10932 - 237s - loss: 0.0138 - val_loss: 0.0147 - 237s/epoch - 22ms/step
+Epoch 133/400
+10932/10932 - 236s - loss: 0.0138 - val_loss: 0.0146 - 236s/epoch - 22ms/step
+Epoch 134/400
+10932/10932 - 237s - loss: 0.0137 - val_loss: 0.0145 - 237s/epoch - 22ms/step
+Epoch 135/400
+10932/10932 - 237s - loss: 0.0138 - val_loss: 0.0145 - 237s/epoch - 22ms/step
+Epoch 136/400
+10932/10932 - 237s - loss: 0.0137 - val_loss: 0.0144 - 237s/epoch - 22ms/step
+Epoch 137/400
+10932/10932 - 237s - loss: 0.0137 - val_loss: 0.0145 - 237s/epoch - 22ms/step
+Epoch 138/400
+10932/10932 - 237s - loss: 0.0136 - val_loss: 0.0143 - 237s/epoch - 22ms/step
+Epoch 139/400
+10932/10932 - 238s - loss: 0.0136 - val_loss: 0.0143 - 238s/epoch - 22ms/step
+Epoch 140/400
+10932/10932 - 235s - loss: 0.0135 - val_loss: 0.0143 - 235s/epoch - 22ms/step
+Epoch 141/400
+10932/10932 - 237s - loss: 0.0135 - val_loss: 0.0143 - 237s/epoch - 22ms/step
+Epoch 142/400
+10932/10932 - 237s - loss: 0.0135 - val_loss: 0.0143 - 237s/epoch - 22ms/step
+Epoch 143/400
+10932/10932 - 231s - loss: 0.0135 - val_loss: 0.0142 - 231s/epoch - 21ms/step
+Epoch 144/400
+10932/10932 - 226s - loss: 0.0134 - val_loss: 0.0142 - 226s/epoch - 21ms/step
+Epoch 145/400
+10932/10932 - 227s - loss: 0.0134 - val_loss: 0.0142 - 227s/epoch - 21ms/step
+Epoch 146/400
+10932/10932 - 227s - loss: 0.0133 - val_loss: 0.0141 - 227s/epoch - 21ms/step
+Epoch 147/400
+10932/10932 - 229s - loss: 0.0133 - val_loss: 0.0140 - 229s/epoch - 21ms/step
+Epoch 148/400
+10932/10932 - 229s - loss: 0.0133 - val_loss: 0.0141 - 229s/epoch - 21ms/step
+Epoch 149/400
+10932/10932 - 229s - loss: 0.0133 - val_loss: 0.0140 - 229s/epoch - 21ms/step
+Epoch 150/400
+10932/10932 - 229s - loss: 0.0133 - val_loss: 0.0140 - 229s/epoch - 21ms/step
+Epoch 151/400
+10932/10932 - 228s - loss: 0.0177 - val_loss: 0.0140 - 228s/epoch - 21ms/step
+Epoch 152/400
+10932/10932 - 228s - loss: 0.0132 - val_loss: 0.0139 - 228s/epoch - 21ms/step
+Epoch 153/400
+10932/10932 - 228s - loss: 0.0132 - val_loss: 0.0139 - 228s/epoch - 21ms/step
+Epoch 154/400
+10932/10932 - 229s - loss: 0.0132 - val_loss: 0.0138 - 229s/epoch - 21ms/step
+Epoch 155/400
+10932/10932 - 222s - loss: 0.0131 - val_loss: 0.0138 - 222s/epoch - 20ms/step
+Epoch 156/400
+10932/10932 - 222s - loss: 0.0137 - val_loss: 0.0138 - 222s/epoch - 20ms/step
+Epoch 157/400
+10932/10932 - 220s - loss: 0.0131 - val_loss: 0.0138 - 220s/epoch - 20ms/step
+Epoch 158/400
+10932/10932 - 222s - loss: 0.0130 - val_loss: 0.0137 - 222s/epoch - 20ms/step
+Epoch 159/400
+10932/10932 - 222s - loss: 0.0130 - val_loss: 0.0137 - 222s/epoch - 20ms/step
+Epoch 160/400
+10932/10932 - 222s - loss: 0.0130 - val_loss: 0.0137 - 222s/epoch - 20ms/step
+Epoch 161/400
+10932/10932 - 222s - loss: 0.0129 - val_loss: 0.0137 - 222s/epoch - 20ms/step
+Epoch 162/400
+10932/10932 - 222s - loss: 0.0129 - val_loss: 0.0137 - 222s/epoch - 20ms/step
+Epoch 163/400
+10932/10932 - 222s - loss: 0.0129 - val_loss: 0.0137 - 222s/epoch - 20ms/step
+Epoch 164/400
+10932/10932 - 223s - loss: 0.0129 - val_loss: 0.0136 - 223s/epoch - 20ms/step
+Epoch 165/400
+10932/10932 - 223s - loss: 0.0128 - val_loss: 0.0136 - 223s/epoch - 20ms/step
+Epoch 166/400
+10932/10932 - 223s - loss: 0.0128 - val_loss: 0.0135 - 223s/epoch - 20ms/step
+Epoch 167/400
+10932/10932 - 227s - loss: 0.0128 - val_loss: 0.0137 - 227s/epoch - 21ms/step
+Epoch 168/400
+10932/10932 - 221s - loss: 0.0129 - val_loss: 0.0137 - 221s/epoch - 20ms/step
+Epoch 169/400
+10932/10932 - 223s - loss: 0.0128 - val_loss: 0.0136 - 223s/epoch - 20ms/step
+Epoch 170/400
+10932/10932 - 222s - loss: 0.0128 - val_loss: 0.0136 - 222s/epoch - 20ms/step
+Epoch 171/400
+10932/10932 - 222s - loss: 0.0127 - val_loss: 0.0135 - 222s/epoch - 20ms/step
+Epoch 172/400
+10932/10932 - 222s - loss: 0.0127 - val_loss: 0.0136 - 222s/epoch - 20ms/step
+Epoch 173/400
+10932/10932 - 222s - loss: 0.0127 - val_loss: 0.0135 - 222s/epoch - 20ms/step
+Epoch 174/400
+10932/10932 - 221s - loss: 0.0126 - val_loss: 0.0135 - 221s/epoch - 20ms/step
+Epoch 175/400
+10932/10932 - 222s - loss: 0.0126 - val_loss: 0.0135 - 222s/epoch - 20ms/step
+Epoch 176/400
+10932/10932 - 222s - loss: 0.0126 - val_loss: 0.0135 - 222s/epoch - 20ms/step
+Epoch 177/400
+10932/10932 - 224s - loss: 0.0126 - val_loss: 0.0133 - 224s/epoch - 20ms/step
+Epoch 178/400
+10932/10932 - 224s - loss: 0.0125 - val_loss: 0.0134 - 224s/epoch - 21ms/step
+Epoch 179/400
+10932/10932 - 222s - loss: 0.0125 - val_loss: 0.0133 - 222s/epoch - 20ms/step
+Epoch 180/400
+10932/10932 - 224s - loss: 0.0125 - val_loss: 0.0133 - 224s/epoch - 21ms/step
+Epoch 181/400
+10932/10932 - 225s - loss: 0.0125 - val_loss: 0.0132 - 225s/epoch - 21ms/step
+Epoch 182/400
+10932/10932 - 224s - loss: 0.0125 - val_loss: 0.0134 - 224s/epoch - 21ms/step
+Epoch 183/400
+10932/10932 - 224s - loss: 0.0124 - val_loss: 0.0133 - 224s/epoch - 20ms/step
+Epoch 184/400
+10932/10932 - 223s - loss: 0.0124 - val_loss: 0.0133 - 223s/epoch - 20ms/step
+Epoch 185/400
+10932/10932 - 224s - loss: 0.0124 - val_loss: 0.0133 - 224s/epoch - 21ms/step
+Epoch 186/400
+10932/10932 - 224s - loss: 0.0123 - val_loss: 0.0133 - 224s/epoch - 21ms/step
+Epoch 187/400
+10932/10932 - 224s - loss: 0.0124 - val_loss: 0.0131 - 224s/epoch - 21ms/step
+Epoch 188/400
+10932/10932 - 224s - loss: 0.0123 - val_loss: 0.0132 - 224s/epoch - 20ms/step
+Epoch 189/400
+10932/10932 - 223s - loss: 0.0123 - val_loss: 0.0132 - 223s/epoch - 20ms/step
+Epoch 190/400
+10932/10932 - 224s - loss: 0.0123 - val_loss: 0.0132 - 224s/epoch - 21ms/step
+Epoch 191/400
+10932/10932 - 224s - loss: 0.0122 - val_loss: 0.0132 - 224s/epoch - 21ms/step
+Epoch 192/400
+10932/10932 - 223s - loss: 0.0122 - val_loss: 0.0131 - 223s/epoch - 20ms/step
+Epoch 193/400
+10932/10932 - 223s - loss: 0.0122 - val_loss: 0.0131 - 223s/epoch - 20ms/step
+Epoch 194/400
+10932/10932 - 221s - loss: 0.0122 - val_loss: 0.0131 - 221s/epoch - 20ms/step
+Epoch 195/400
+10932/10932 - 223s - loss: 0.0122 - val_loss: 0.0131 - 223s/epoch - 20ms/step
+Epoch 196/400
+10932/10932 - 223s - loss: 0.0121 - val_loss: 0.0132 - 223s/epoch - 20ms/step
+Epoch 197/400
+10932/10932 - 223s - loss: 0.0121 - val_loss: 0.0132 - 223s/epoch - 20ms/step
+Epoch 198/400
+10932/10932 - 222s - loss: 0.0121 - val_loss: 0.0132 - 222s/epoch - 20ms/step
+Epoch 199/400
+10932/10932 - 220s - loss: 0.0121 - val_loss: 0.0132 - 220s/epoch - 20ms/step
+Epoch 200/400
+10932/10932 - 220s - loss: 0.0120 - val_loss: 0.0131 - 220s/epoch - 20ms/step
+Epoch 201/400
+10932/10932 - 219s - loss: 0.0120 - val_loss: 0.0132 - 219s/epoch - 20ms/step
+Epoch 202/400
+10932/10932 - 218s - loss: 0.0120 - val_loss: 0.0131 - 218s/epoch - 20ms/step
+Epoch 203/400
+10932/10932 - 218s - loss: 0.0120 - val_loss: 0.0132 - 218s/epoch - 20ms/step
+Epoch 204/400
+10932/10932 - 217s - loss: 0.0120 - val_loss: 0.0131 - 217s/epoch - 20ms/step
+Epoch 205/400
+10932/10932 - 217s - loss: 0.0119 - val_loss: 0.0131 - 217s/epoch - 20ms/step
+Epoch 206/400
+10932/10932 - 218s - loss: 0.0119 - val_loss: 0.0131 - 218s/epoch - 20ms/step
+Epoch 207/400
+10932/10932 - 219s - loss: 0.0119 - val_loss: 0.0132 - 219s/epoch - 20ms/step
+Epoch 208/400
+10932/10932 - 219s - loss: 0.0119 - val_loss: 0.0131 - 219s/epoch - 20ms/step
+Epoch 209/400
+10932/10932 - 217s - loss: 0.0118 - val_loss: 0.0132 - 217s/epoch - 20ms/step
+Epoch 210/400
+10932/10932 - 218s - loss: 0.0118 - val_loss: 0.0132 - 218s/epoch - 20ms/step
+Epoch 211/400
+10932/10932 - 218s - loss: 0.0118 - val_loss: 0.0132 - 218s/epoch - 20ms/step
+Epoch 212/400
+10932/10932 - 218s - loss: 0.0118 - val_loss: 0.0131 - 218s/epoch - 20ms/step
+Epoch 213/400
+10932/10932 - 218s - loss: 0.0118 - val_loss: 0.0132 - 218s/epoch - 20ms/step
+Epoch 214/400
+10932/10932 - 211s - loss: 0.0117 - val_loss: 0.0132 - 211s/epoch - 19ms/step
+Epoch 215/400
+10932/10932 - 213s - loss: 0.0117 - val_loss: 0.0131 - 213s/epoch - 19ms/step
+Epoch 216/400
+10932/10932 - 213s - loss: 0.0117 - val_loss: 0.0131 - 213s/epoch - 19ms/step
+Epoch 217/400
+10932/10932 - 213s - loss: 0.0117 - val_loss: 0.0131 - 213s/epoch - 20ms/step
+Epoch 218/400
+10932/10932 - 202s - loss: 0.0117 - val_loss: 0.0131 - 202s/epoch - 18ms/step
+Epoch 219/400
+10932/10932 - 195s - loss: 0.0116 - val_loss: 0.0131 - 195s/epoch - 18ms/step
+Epoch 220/400
+10932/10932 - 199s - loss: 0.0116 - val_loss: 0.0131 - 199s/epoch - 18ms/step
+Epoch 221/400
+10932/10932 - 198s - loss: 0.0116 - val_loss: 0.0131 - 198s/epoch - 18ms/step
+Epoch 222/400
+10932/10932 - 198s - loss: 0.0116 - val_loss: 0.0131 - 198s/epoch - 18ms/step
+Epoch 223/400
+10932/10932 - 195s - loss: 0.0116 - val_loss: 0.0131 - 195s/epoch - 18ms/step
+Epoch 224/400
+10932/10932 - 198s - loss: 0.0116 - val_loss: 0.0131 - 198s/epoch - 18ms/step
+Epoch 225/400
+10932/10932 - 198s - loss: 0.0115 - val_loss: 0.0131 - 198s/epoch - 18ms/step
+Epoch 226/400
+10932/10932 - 198s - loss: 0.0115 - val_loss: 0.0131 - 198s/epoch - 18ms/step
+Epoch 227/400
+10932/10932 - 196s - loss: 0.0115 - val_loss: 0.0131 - 196s/epoch - 18ms/step
+Epoch 228/400
+10932/10932 - 198s - loss: 0.0115 - val_loss: 0.0131 - 198s/epoch - 18ms/step
+Epoch 229/400
+10932/10932 - 198s - loss: 0.0115 - val_loss: 0.0131 - 198s/epoch - 18ms/step
+Epoch 230/400
+10932/10932 - 201s - loss: 0.0115 - val_loss: 0.0131 - 201s/epoch - 18ms/step
+Epoch 231/400
+10932/10932 - 203s - loss: 0.0115 - val_loss: 0.0131 - 203s/epoch - 19ms/step
+Epoch 232/400
+10932/10932 - 206s - loss: 0.0115 - val_loss: 0.0131 - 206s/epoch - 19ms/step
+Epoch 233/400
+10932/10932 - 206s - loss: 0.0114 - val_loss: 0.0131 - 206s/epoch - 19ms/step
+Epoch 234/400
+10932/10932 - 206s - loss: 0.0114 - val_loss: 0.0131 - 206s/epoch - 19ms/step
+Epoch 235/400
+10932/10932 - 206s - loss: 0.0114 - val_loss: 0.0131 - 206s/epoch - 19ms/step
+Epoch 236/400
+10932/10932 - 203s - loss: 0.0114 - val_loss: 0.0131 - 203s/epoch - 19ms/step
+Epoch 237/400
+10932/10932 - 206s - loss: 0.0114 - val_loss: 0.0131 - 206s/epoch - 19ms/step
+Epoch 238/400
+10932/10932 - 205s - loss: 0.0113 - val_loss: 0.0131 - 205s/epoch - 19ms/step
+Epoch 239/400
+10932/10932 - 206s - loss: 0.0113 - val_loss: 0.0131 - 206s/epoch - 19ms/step
+Epoch 240/400
+10932/10932 - 205s - loss: 0.0113 - val_loss: 0.0131 - 205s/epoch - 19ms/step
+Epoch 241/400
+10932/10932 - 205s - loss: 0.0113 - val_loss: 0.0131 - 205s/epoch - 19ms/step
+Epoch 242/400
+10932/10932 - 204s - loss: 0.0113 - val_loss: 0.0131 - 204s/epoch - 19ms/step
+Epoch 243/400
+10932/10932 - 205s - loss: 0.0113 - val_loss: 0.0131 - 205s/epoch - 19ms/step
+Epoch 244/400
+10932/10932 - 205s - loss: 0.0113 - val_loss: 0.0131 - 205s/epoch - 19ms/step
+Epoch 245/400
+10932/10932 - 205s - loss: 0.0113 - val_loss: 0.0131 - 205s/epoch - 19ms/step
+Epoch 246/400
+10932/10932 - 206s - loss: 0.0113 - val_loss: 0.0131 - 206s/epoch - 19ms/step
+Epoch 247/400
+10932/10932 - 205s - loss: 0.0112 - val_loss: 0.0130 - 205s/epoch - 19ms/step
+Epoch 248/400
+10932/10932 - 204s - loss: 0.0112 - val_loss: 0.0131 - 204s/epoch - 19ms/step
+Epoch 249/400
+10932/10932 - 206s - loss: 0.0112 - val_loss: 0.0131 - 206s/epoch - 19ms/step
+Epoch 250/400
+10932/10932 - 205s - loss: 0.0112 - val_loss: 0.0131 - 205s/epoch - 19ms/step
+Epoch 251/400
+10932/10932 - 206s - loss: 0.0112 - val_loss: 0.0131 - 206s/epoch - 19ms/step
+Epoch 252/400
+10932/10932 - 205s - loss: 0.0112 - val_loss: 0.0131 - 205s/epoch - 19ms/step
+Epoch 253/400
+10932/10932 - 204s - loss: 0.0112 - val_loss: 0.0131 - 204s/epoch - 19ms/step
+Epoch 254/400
+10932/10932 - 205s - loss: 0.0111 - val_loss: 0.0131 - 205s/epoch - 19ms/step
+Epoch 255/400
+10932/10932 - 205s - loss: 0.0111 - val_loss: 0.0131 - 205s/epoch - 19ms/step
+Epoch 256/400
+10932/10932 - 202s - loss: 0.0111 - val_loss: 0.0131 - 202s/epoch - 19ms/step
+Epoch 257/400
+10932/10932 - 203s - loss: 0.0111 - val_loss: 0.0131 - 203s/epoch - 19ms/step
+Epoch 258/400
+10932/10932 - 202s - loss: 0.0111 - val_loss: 0.0131 - 202s/epoch - 18ms/step
+Epoch 259/400
+10932/10932 - 205s - loss: 0.0111 - val_loss: 0.0131 - 205s/epoch - 19ms/step
+Epoch 260/400
+10932/10932 - 205s - loss: 0.0111 - val_loss: 0.0130 - 205s/epoch - 19ms/step
+Epoch 261/400
+10932/10932 - 206s - loss: 0.0111 - val_loss: 0.0131 - 206s/epoch - 19ms/step
+Epoch 262/400
+10932/10932 - 205s - loss: 0.0111 - val_loss: 0.0130 - 205s/epoch - 19ms/step
+Epoch 263/400
+10932/10932 - 204s - loss: 0.0110 - val_loss: 0.0130 - 204s/epoch - 19ms/step
+Epoch 264/400
+10932/10932 - 204s - loss: 0.0110 - val_loss: 0.0130 - 204s/epoch - 19ms/step
+Epoch 265/400
+10932/10932 - 206s - loss: 0.0110 - val_loss: 0.0130 - 206s/epoch - 19ms/step
+Epoch 266/400
+10932/10932 - 206s - loss: 0.0110 - val_loss: 0.0130 - 206s/epoch - 19ms/step
+Epoch 267/400
+10932/10932 - 205s - loss: 0.0110 - val_loss: 0.0130 - 205s/epoch - 19ms/step
+Epoch 268/400
+10932/10932 - 206s - loss: 0.0110 - val_loss: 0.0130 - 206s/epoch - 19ms/step
+Epoch 269/400
+10932/10932 - 205s - loss: 0.0110 - val_loss: 0.0130 - 205s/epoch - 19ms/step
+Epoch 270/400
+10932/10932 - 210s - loss: 0.0110 - val_loss: 0.0130 - 210s/epoch - 19ms/step
+Epoch 271/400
+10932/10932 - 210s - loss: 0.0110 - val_loss: 0.0130 - 210s/epoch - 19ms/step
+Epoch 272/400
+10932/10932 - 209s - loss: 0.0110 - val_loss: 0.0130 - 209s/epoch - 19ms/step
+Epoch 273/400
+10932/10932 - 209s - loss: 0.0110 - val_loss: 0.0130 - 209s/epoch - 19ms/step
+Epoch 274/400
+10932/10932 - 210s - loss: 0.0110 - val_loss: 0.0130 - 210s/epoch - 19ms/step
+Epoch 275/400
+10932/10932 - 207s - loss: 0.0110 - val_loss: 0.0130 - 207s/epoch - 19ms/step
+Epoch 276/400
+10932/10932 - 210s - loss: 0.0109 - val_loss: 0.0130 - 210s/epoch - 19ms/step
+Epoch 277/400
+10932/10932 - 210s - loss: 0.0109 - val_loss: 0.0130 - 210s/epoch - 19ms/step
+Epoch 278/400
+10932/10932 - 210s - loss: 0.0109 - val_loss: 0.0130 - 210s/epoch - 19ms/step
+Epoch 279/400
+10932/10932 - 210s - loss: 0.0109 - val_loss: 0.0129 - 210s/epoch - 19ms/step
+Epoch 280/400
+10932/10932 - 210s - loss: 0.0109 - val_loss: 0.0130 - 210s/epoch - 19ms/step
+Epoch 281/400
+10932/10932 - 207s - loss: 0.0109 - val_loss: 0.0130 - 207s/epoch - 19ms/step
+Epoch 282/400
+10932/10932 - 209s - loss: 0.0109 - val_loss: 0.0130 - 209s/epoch - 19ms/step
+Epoch 283/400
+10932/10932 - 210s - loss: 0.0108 - val_loss: 0.0130 - 210s/epoch - 19ms/step
+Epoch 284/400
+10932/10932 - 206s - loss: 0.0108 - val_loss: 0.0130 - 206s/epoch - 19ms/step
+Epoch 285/400
+10932/10932 - 206s - loss: 0.0108 - val_loss: 0.0130 - 206s/epoch - 19ms/step
+Epoch 286/400
+10932/10932 - 206s - loss: 0.0108 - val_loss: 0.0130 - 206s/epoch - 19ms/step
+Epoch 287/400
+10932/10932 - 203s - loss: 0.0108 - val_loss: 0.0130 - 203s/epoch - 19ms/step
+Epoch 288/400
+10932/10932 - 206s - loss: 0.0108 - val_loss: 0.0130 - 206s/epoch - 19ms/step
+Epoch 289/400
+10932/10932 - 206s - loss: 0.0108 - val_loss: 0.0130 - 206s/epoch - 19ms/step
+Epoch 290/400
+10932/10932 - 206s - loss: 0.0108 - val_loss: 0.0130 - 206s/epoch - 19ms/step
+Epoch 291/400
+10932/10932 - 208s - loss: 0.0107 - val_loss: 0.0131 - 208s/epoch - 19ms/step
+Epoch 292/400
+10932/10932 - 207s - loss: 0.0108 - val_loss: 0.0130 - 207s/epoch - 19ms/step
+Epoch 293/400
+10932/10932 - 206s - loss: 0.0107 - val_loss: 0.0131 - 206s/epoch - 19ms/step
+Epoch 294/400
+10932/10932 - 207s - loss: 0.0107 - val_loss: 0.0130 - 207s/epoch - 19ms/step
+Epoch 295/400
+10932/10932 - 208s - loss: 0.0107 - val_loss: 0.0130 - 208s/epoch - 19ms/step
+Epoch 296/400
+10932/10932 - 207s - loss: 0.0107 - val_loss: 0.0130 - 207s/epoch - 19ms/step
+Epoch 297/400
+10932/10932 - 207s - loss: 0.0107 - val_loss: 0.0131 - 207s/epoch - 19ms/step
+Epoch 298/400
+10932/10932 - 205s - loss: 0.0107 - val_loss: 0.0130 - 205s/epoch - 19ms/step
+Epoch 299/400
+10932/10932 - 204s - loss: 0.0107 - val_loss: 0.0131 - 204s/epoch - 19ms/step
+Epoch 300/400
+10932/10932 - 206s - loss: 0.0107 - val_loss: 0.0131 - 206s/epoch - 19ms/step
+Epoch 301/400
+10932/10932 - 206s - loss: 0.0107 - val_loss: 0.0130 - 206s/epoch - 19ms/step
+Epoch 302/400
+10932/10932 - 206s - loss: 0.0106 - val_loss: 0.0131 - 206s/epoch - 19ms/step
+Epoch 303/400
+10932/10932 - 205s - loss: 0.0106 - val_loss: 0.0131 - 205s/epoch - 19ms/step
+Epoch 304/400
+10932/10932 - 204s - loss: 0.0106 - val_loss: 0.0131 - 204s/epoch - 19ms/step
+Epoch 305/400
+10932/10932 - 206s - loss: 0.0106 - val_loss: 0.0132 - 206s/epoch - 19ms/step
+Epoch 306/400
+10932/10932 - 206s - loss: 0.0106 - val_loss: 0.0132 - 206s/epoch - 19ms/step
+Epoch 307/400
+10932/10932 - 202s - loss: 0.0106 - val_loss: 0.0132 - 202s/epoch - 18ms/step
+Epoch 308/400
+10932/10932 - 198s - loss: 0.0106 - val_loss: 0.0132 - 198s/epoch - 18ms/step
+Epoch 309/400
+10932/10932 - 196s - loss: 0.0106 - val_loss: 0.0133 - 196s/epoch - 18ms/step
+Epoch 310/400
+10932/10932 - 206s - loss: 0.0106 - val_loss: 0.0132 - 206s/epoch - 19ms/step
+Epoch 311/400
+10932/10932 - 206s - loss: 0.0106 - val_loss: 0.0133 - 206s/epoch - 19ms/step
+Epoch 312/400
+10932/10932 - 206s - loss: 0.0106 - val_loss: 0.0133 - 206s/epoch - 19ms/step
+Epoch 313/400
+10932/10932 - 205s - loss: 0.0106 - val_loss: 0.0133 - 205s/epoch - 19ms/step
+Epoch 314/400
+10932/10932 - 203s - loss: 0.0105 - val_loss: 0.0133 - 203s/epoch - 19ms/step
+Epoch 315/400
+10932/10932 - 206s - loss: 0.0106 - val_loss: 0.0134 - 206s/epoch - 19ms/step
+Epoch 316/400
+10932/10932 - 206s - loss: 0.0105 - val_loss: 0.0134 - 206s/epoch - 19ms/step
+Epoch 317/400
+10932/10932 - 205s - loss: 0.0105 - val_loss: 0.0134 - 205s/epoch - 19ms/step
+Epoch 318/400
+10932/10932 - 206s - loss: 0.0105 - val_loss: 0.0134 - 206s/epoch - 19ms/step
+Epoch 319/400
+10932/10932 - 203s - loss: 0.0105 - val_loss: 0.0134 - 203s/epoch - 19ms/step
+Epoch 320/400
+10932/10932 - 206s - loss: 0.0105 - val_loss: 0.0134 - 206s/epoch - 19ms/step
+Epoch 321/400
+10932/10932 - 206s - loss: 0.0105 - val_loss: 0.0134 - 206s/epoch - 19ms/step
+Epoch 322/400
+10932/10932 - 206s - loss: 0.0105 - val_loss: 0.0134 - 206s/epoch - 19ms/step
+Epoch 323/400
+10932/10932 - 207s - loss: 0.0105 - val_loss: 0.0134 - 207s/epoch - 19ms/step
+Epoch 324/400
+10932/10932 - 203s - loss: 0.0105 - val_loss: 0.0134 - 203s/epoch - 19ms/step
+Epoch 325/400
+10932/10932 - 207s - loss: 0.0104 - val_loss: 0.0134 - 207s/epoch - 19ms/step
+Epoch 326/400
+10932/10932 - 206s - loss: 0.0104 - val_loss: 0.0134 - 206s/epoch - 19ms/step
+Epoch 327/400
+10932/10932 - 206s - loss: 0.0104 - val_loss: 0.0134 - 206s/epoch - 19ms/step
+Epoch 328/400
+10932/10932 - 205s - loss: 0.0104 - val_loss: 0.0134 - 205s/epoch - 19ms/step
+Epoch 329/400
+10932/10932 - 203s - loss: 0.0104 - val_loss: 0.0135 - 203s/epoch - 19ms/step
+Epoch 330/400
+10932/10932 - 205s - loss: 0.0104 - val_loss: 0.0135 - 205s/epoch - 19ms/step
+Epoch 331/400
+10932/10932 - 205s - loss: 0.0104 - val_loss: 0.0134 - 205s/epoch - 19ms/step
+Epoch 332/400
+10932/10932 - 206s - loss: 0.0104 - val_loss: 0.0137 - 206s/epoch - 19ms/step
+Epoch 333/400
+10932/10932 - 205s - loss: 0.0104 - val_loss: 0.0135 - 205s/epoch - 19ms/step
+Epoch 334/400
+10932/10932 - 205s - loss: 0.0104 - val_loss: 0.0135 - 205s/epoch - 19ms/step
+Epoch 335/400
+10932/10932 - 206s - loss: 0.0104 - val_loss: 0.0134 - 206s/epoch - 19ms/step
+Epoch 336/400
+10932/10932 - 206s - loss: 0.0104 - val_loss: 0.0135 - 206s/epoch - 19ms/step
+Epoch 337/400
+10932/10932 - 207s - loss: 0.0103 - val_loss: 0.0135 - 207s/epoch - 19ms/step
+Epoch 338/400
+10932/10932 - 207s - loss: 0.0103 - val_loss: 0.0135 - 207s/epoch - 19ms/step
+Epoch 339/400
+10932/10932 - 205s - loss: 0.0103 - val_loss: 0.0137 - 205s/epoch - 19ms/step
+Epoch 340/400
+10932/10932 - 209s - loss: 0.0103 - val_loss: 0.0136 - 209s/epoch - 19ms/step
+Epoch 341/400
+10932/10932 - 208s - loss: 0.0104 - val_loss: 0.0136 - 208s/epoch - 19ms/step
+Epoch 342/400
+10932/10932 - 209s - loss: 0.0104 - val_loss: 0.0136 - 209s/epoch - 19ms/step
+Epoch 343/400
+10932/10932 - 209s - loss: 0.0104 - val_loss: 0.0135 - 209s/epoch - 19ms/step
+Epoch 344/400
+10932/10932 - 209s - loss: 0.0103 - val_loss: 0.0135 - 209s/epoch - 19ms/step
+Epoch 345/400
+10932/10932 - 207s - loss: 0.0103 - val_loss: 0.0135 - 207s/epoch - 19ms/step
+Epoch 346/400
+10932/10932 - 206s - loss: 0.0103 - val_loss: 0.0135 - 206s/epoch - 19ms/step
+Epoch 347/400
+10932/10932 - 204s - loss: 0.0103 - val_loss: 0.0136 - 204s/epoch - 19ms/step
+Epoch 348/400
+10932/10932 - 203s - loss: 0.0103 - val_loss: 0.0136 - 203s/epoch - 19ms/step
+Epoch 349/400
+10932/10932 - 206s - loss: 0.0103 - val_loss: 0.0136 - 206s/epoch - 19ms/step
+Epoch 350/400
+10932/10932 - 209s - loss: 0.0103 - val_loss: 0.0136 - 209s/epoch - 19ms/step
+Epoch 351/400
+10932/10932 - 209s - loss: 0.0103 - val_loss: 0.0136 - 209s/epoch - 19ms/step
+Epoch 352/400
+10932/10932 - 207s - loss: 0.0103 - val_loss: 0.0136 - 207s/epoch - 19ms/step
+Epoch 353/400
+10932/10932 - 210s - loss: 0.0103 - val_loss: 0.0136 - 210s/epoch - 19ms/step
+Epoch 354/400
+10932/10932 - 209s - loss: 0.0103 - val_loss: 0.0137 - 209s/epoch - 19ms/step
+Epoch 355/400
+10932/10932 - 210s - loss: 0.0103 - val_loss: 0.0136 - 210s/epoch - 19ms/step
+Epoch 356/400
+10932/10932 - 209s - loss: 0.0103 - val_loss: 0.0136 - 209s/epoch - 19ms/step
+Epoch 357/400
+10932/10932 - 209s - loss: 0.0103 - val_loss: 0.0136 - 209s/epoch - 19ms/step
+Epoch 358/400
+10932/10932 - 208s - loss: 0.0103 - val_loss: 0.0136 - 208s/epoch - 19ms/step
+Epoch 359/400
+10932/10932 - 210s - loss: 0.0103 - val_loss: 0.0136 - 210s/epoch - 19ms/step
+Epoch 360/400
+10932/10932 - 210s - loss: 0.0103 - val_loss: 0.0136 - 210s/epoch - 19ms/step
+Epoch 361/400
+10932/10932 - 210s - loss: 0.0102 - val_loss: 0.0136 - 210s/epoch - 19ms/step
+Epoch 362/400
+10932/10932 - 209s - loss: 0.0102 - val_loss: 0.0136 - 209s/epoch - 19ms/step
+Epoch 363/400
+10932/10932 - 209s - loss: 0.0102 - val_loss: 0.0137 - 209s/epoch - 19ms/step
+Epoch 364/400
+10932/10932 - 207s - loss: 0.0102 - val_loss: 0.0137 - 207s/epoch - 19ms/step
+Epoch 365/400
+10932/10932 - 209s - loss: 0.0102 - val_loss: 0.0136 - 209s/epoch - 19ms/step
+Epoch 366/400
+10932/10932 - 209s - loss: 0.0102 - val_loss: 0.0135 - 209s/epoch - 19ms/step
+Epoch 367/400
+10932/10932 - 209s - loss: 0.0102 - val_loss: 0.0136 - 209s/epoch - 19ms/step
+Epoch 368/400
+10932/10932 - 209s - loss: 0.0102 - val_loss: 0.0137 - 209s/epoch - 19ms/step
+Epoch 369/400
+10932/10932 - 208s - loss: 0.0102 - val_loss: 0.0136 - 208s/epoch - 19ms/step
+Epoch 370/400
+10932/10932 - 207s - loss: 0.0102 - val_loss: 0.0136 - 207s/epoch - 19ms/step
+Epoch 371/400
+10932/10932 - 209s - loss: 0.0102 - val_loss: 0.0136 - 209s/epoch - 19ms/step
+Epoch 372/400
+10932/10932 - 209s - loss: 0.0102 - val_loss: 0.0135 - 209s/epoch - 19ms/step
+Epoch 373/400
+10932/10932 - 209s - loss: 0.0102 - val_loss: 0.0136 - 209s/epoch - 19ms/step
+Epoch 374/400
+10932/10932 - 209s - loss: 0.0102 - val_loss: 0.0136 - 209s/epoch - 19ms/step
+Epoch 375/400
+10932/10932 - 206s - loss: 0.0101 - val_loss: 0.0136 - 206s/epoch - 19ms/step
+Epoch 376/400
+10932/10932 - 210s - loss: 0.0102 - val_loss: 0.0136 - 210s/epoch - 19ms/step
+Epoch 377/400
+10932/10932 - 209s - loss: 0.0101 - val_loss: 0.0136 - 209s/epoch - 19ms/step
+Epoch 378/400
+10932/10932 - 209s - loss: 0.0102 - val_loss: 0.0135 - 209s/epoch - 19ms/step
+Epoch 379/400
+10932/10932 - 209s - loss: 0.0101 - val_loss: 0.0135 - 209s/epoch - 19ms/step
+Epoch 380/400
+10932/10932 - 207s - loss: 0.0101 - val_loss: 0.0136 - 207s/epoch - 19ms/step
+Epoch 381/400
+10932/10932 - 209s - loss: 0.0101 - val_loss: 0.0137 - 209s/epoch - 19ms/step
+Epoch 382/400
+10932/10932 - 211s - loss: 0.0101 - val_loss: 0.0137 - 211s/epoch - 19ms/step
+Epoch 383/400
+10932/10932 - 210s - loss: 0.0101 - val_loss: 0.0137 - 210s/epoch - 19ms/step
+Epoch 384/400
+10932/10932 - 210s - loss: 0.0101 - val_loss: 0.0136 - 210s/epoch - 19ms/step
+Epoch 385/400
+10932/10932 - 206s - loss: 0.0101 - val_loss: 0.0136 - 206s/epoch - 19ms/step
+Epoch 386/400
+10932/10932 - 199s - loss: 0.0101 - val_loss: 0.0136 - 199s/epoch - 18ms/step
+Epoch 387/400
+10932/10932 - 192s - loss: 0.0101 - val_loss: 0.0135 - 192s/epoch - 18ms/step
+Epoch 388/400
+10932/10932 - 188s - loss: 0.0101 - val_loss: 0.0135 - 188s/epoch - 17ms/step
+Epoch 389/400
+10932/10932 - 187s - loss: 0.0100 - val_loss: 0.0136 - 187s/epoch - 17ms/step
+Epoch 390/400
+10932/10932 - 189s - loss: 0.0100 - val_loss: 0.0137 - 189s/epoch - 17ms/step
+Epoch 391/400
+10932/10932 - 192s - loss: 0.0100 - val_loss: 0.0137 - 192s/epoch - 18ms/step
+Epoch 392/400
+10932/10932 - 201s - loss: 0.0100 - val_loss: 0.0136 - 201s/epoch - 18ms/step
+Epoch 393/400
+10932/10932 - 197s - loss: 0.0101 - val_loss: 0.0135 - 197s/epoch - 18ms/step
+Epoch 394/400
+10932/10932 - 200s - loss: 0.0100 - val_loss: 0.0136 - 200s/epoch - 18ms/step
+Epoch 395/400
+10932/10932 - 199s - loss: 0.0100 - val_loss: 0.0136 - 199s/epoch - 18ms/step
+Epoch 396/400
+10932/10932 - 196s - loss: 0.0100 - val_loss: 0.0136 - 196s/epoch - 18ms/step
+Epoch 397/400
+10932/10932 - 196s - loss: 0.0100 - val_loss: 0.0136 - 196s/epoch - 18ms/step
+Epoch 398/400
+10932/10932 - 195s - loss: 0.0100 - val_loss: 0.0135 - 195s/epoch - 18ms/step
+Epoch 399/400
+10932/10932 - 193s - loss: 0.0100 - val_loss: 0.0136 - 193s/epoch - 18ms/step
+Epoch 400/400
+10932/10932 - 189s - loss: 0.0100 - val_loss: 0.0136 - 189s/epoch - 17ms/step
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@cccxc409.pok.ibm.com>
+Subject: Job 52775: </u/murtazaz/ionic_cond/082324/job.sh> in cluster <cccCluster> Done
+
+Job </u/murtazaz/ionic_cond/082324/job.sh> was submitted from host <cccxl016> by user <murtazaz> in cluster <cccCluster> at Thu Sep 12 12:55:21 2024
+Job was executed on host(s) <4*cccxc409>, in queue <x86_24h>, as user <murtazaz> in cluster <cccCluster> at Thu Sep 12 12:55:22 2024
+</u/murtazaz> was used as the home directory.
+</u/murtazaz/ionic_cond/082324> was used as the working directory.
+Started at Thu Sep 12 12:55:22 2024
+Terminated at Fri Sep 13 11:59:58 2024
+Results reported at Fri Sep 13 11:59:58 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/u/murtazaz/ionic_cond/082324/job.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   135501.30 sec.
+    Max Memory :                                 1381 MB
+    Average Memory :                             832.72 MB
+    Total Requested Memory :                     2252.00 MB
+    Delta Memory :                               871.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                28
+    Run time :                                   83076 sec.
+    Turnaround time :                            83077 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <error_2.txt> for stderr output of this job.
+
